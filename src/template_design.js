@@ -19,7 +19,7 @@ class Report {
 		}
 	}
 
-	output_line(line) {
+	output_line() {
 	}
 
 	output_end() {
