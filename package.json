@@ -1,0 +1,18 @@
+{
+  "name": "es6 desgin pattern",
+  "version": "1.0.0",
+  "description": "es6 desgin pattern",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "author": "K90j1",
+  "license": "ISC"
+}
