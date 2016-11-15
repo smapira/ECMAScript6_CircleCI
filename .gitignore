@@ -38,11 +38,4 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 lib/
-.idea/.name
-.idea/ECMAScript6_CircleCI.iml
-.idea/encodings.xml
-.idea/jsLibraryMappings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/
-.idea/workspace.xml
+.idea/
