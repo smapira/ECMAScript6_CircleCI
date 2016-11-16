@@ -26,7 +26,7 @@ class Report {
 	}
 }
 
-class HTMLReport extends Report {
+class HTML extends Report {
 	output_start() {
 		return "<html><head><title>" + this.title + "</title></head><body>\n";
 	}
@@ -40,7 +40,7 @@ class HTMLReport extends Report {
 	}
 }
 
-class PlaneTextReport extends Report {
+class PlaneText extends Report {
 	output_start() {
 		return "**** " + this.title + "****\n";
 	}
@@ -54,4 +54,4 @@ class PlaneTextReport extends Report {
 	}
 }
 
-module.exports = {HTMLReport, PlaneTextReport};
+module.exports = {HTML, PlaneText};

@@ -7,7 +7,7 @@ describe('Report', () => {
 	describe('#OutPut', () => {
 		var report;
 		beforeEach(() => {
-			report = new Report.HTMLReport();
+			report = new Report.HTML();
 			expect(report.title).to.equal("月次報告");
 		});
 
@@ -16,7 +16,7 @@ describe('Report', () => {
 		});
 		
 		it('can be changed', () => {
-			report = new Report.PlaneTextReport();
+			report = new Report.PlaneText();
 			expect(report.output_report()).to.equal("**** 月次報告****\n順調\n最高\n");
 		});
 	});
