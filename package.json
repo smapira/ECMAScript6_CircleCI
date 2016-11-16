@@ -18,8 +18,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "build": "babel src -d lib",
-    "lint": "eslint src/*.js",
-    "cover": "istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel-core/register"
+    "lint": "eslint src/*.js"
   },
   "author": "K90j1",
   "license": "ISC"
