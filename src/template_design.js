@@ -5,18 +5,18 @@ class Report {
 	}
 
 	output_report() {
-		this.output_start();
-		this.output_body(this.text);
-		this.output_end();
+		return this.output_start() + this.output_body() + this.output_end();
 	}
 
 	output_start() {
 	}
 
 	output_body() {
+		var result = "";
 		for (const line of this.text) {
-			this.output_line(line)
+			result += this.output_line(line);
 		}
+		return result;
 	}
 
 	output_line() {
@@ -28,33 +28,30 @@ class Report {
 
 class HTMLReport extends Report {
 	output_start() {
-		console.log("<html><head><title>" + this.title + "</title></head><body>");
+		return "<html><head><title>" + this.title + "</title></head><body>\n";
 	}
 
 	output_line(line) {
-		console.log("<p>" + line + "</p>");
+		return "<p>" + line + "</p>\n";
 	}
 
 	output_end() {
-		console.log("</body></html>");
+		return "</body></html>\n";
 	}
 }
 
 class PlaneTextReport extends Report {
 	output_start() {
-		console.log("**** " + this.title + "****");
+		return "**** " + this.title + "****\n";
 	}
 
 	output_line(line) {
-		console.log(line);
+		return line + "\n";
 	}
 
 	output_end() {
+		return "";
 	}
 }
 
-const html_report = new HTMLReport();
-html_report.output_report();
-
-const plane_text_report = new PlaneTextReport();
-plane_text_report.output_report();
+module.exports = {HTMLReport, PlaneTextReport};
