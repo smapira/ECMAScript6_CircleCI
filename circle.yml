@@ -7,5 +7,7 @@ machine:
     version: 7.0.0
 
 test:
+  pre:
+    - npm run lint
   override:
     - npm test
