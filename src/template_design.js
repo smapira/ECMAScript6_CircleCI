@@ -12,10 +12,11 @@ class Report {
 	}
 
 	output_body() {
-		var result = "";
+		let result = "";
 		for (const line of this.text) {
 			result += this.output_line(line);
 		}
+
 		return result;
 	}
 
@@ -54,4 +55,7 @@ class PlaneText extends Report {
 	}
 }
 
-module.exports = {HTML, PlaneText};
+module.exports = {
+	HTML,
+	PlaneText
+};
